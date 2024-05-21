@@ -16,5 +16,18 @@ namespace Design
         {
             InitializeComponent();
         }
+
+        AddProduct aP = new AddProduct();
+        
+        private void button_addProduct_Click(object sender, EventArgs e)
+        {
+            aP.Show();
+        }
+
+        private void button_cancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
