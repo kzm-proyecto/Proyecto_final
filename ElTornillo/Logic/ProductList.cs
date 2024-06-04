@@ -8,6 +8,7 @@ namespace Logic
 {
     public class ProductList
     {
+
         private List<Product> productList;
 
         public ProductList()
@@ -25,7 +26,16 @@ namespace Logic
             productList.Remove(product);
         }
 
-        /*
+        public List<Product> GetProductList()
+        {
+            return productList;
+        }
+
+        public Product GetProductId(int id)
+        {
+            return productList.Find(p => p.Id == id);
+        }
+
         public void ModifyProduct(Product product)
         {
             int index = productList.FindIndex(p => p.Id == product.Id);
@@ -34,21 +44,14 @@ namespace Logic
                 productList[index] = product;
             }
         }
-        */
-
-        /*
-        public Product GetProductId(int id)
-        {
-            return productList.Find(p => p.Id == id);
-        }
-        */
 
         public StringBuilder GetProduct()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder product = new StringBuilder();
             foreach (Product p in productList)
-                sb.Append($"[{p.ToString()}]\n");
-            return sb;
+                product.Append($"[{p.ToString()}]\n");
+            return product;
         }
+
     }
 }

@@ -38,7 +38,6 @@ namespace Logic
         public string Brand { get => brand; set => brand = value; }
         public double Price { get => price; set => price = value; }
 
-        // Metodo ToString
         public override string ToString()
         {
             return $"Nombre [{name}], Precio [{price}], Tipo [{type}], Marca [{brand}], Cantidad [{stock}], Descripcion [{description}]";
